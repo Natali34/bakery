@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box; /*задаётся, чтобы padding и margin не сплюсовывались по размером со своим элементом*/
+}
+
+
+@font-face {
+   font-family: 'Philosopher';
+   src: local('Philosopher');
+   src: url(../fonts/Philosopher-Regular.ttf);
+}
+
+html {
+   font-family: 'Roboto!';
+}
+
+@font-face {
+   font-family: 'Roboto!';
+   src: local('Roboto');
+   src: url('../fonts/Roboto-Regular.eot');
+   src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+   url('../fonts/Roboto-Regular.woff') format('woff'),
+   url('../fonts/Roboto-Regular.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+   }
+
+   @font-face {
+      font-family: 'Roboto!';
+      src: local('Roboto');
+      src: url('../fonts/Roboto-Bold.eot');
+      src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Roboto-Bold.woff') format('woff'),
+      url('../fonts/Roboto-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      }
+body {
+    background-color: #ffe2b0;
+}
+header {
+    text-align: center; /*выравнивание текста, но помежет нам выровнить изображение*/
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;  /*убирает точки (маркеры)  списка*/
+    text-align: center;
+    padding: 0px;
+   }
+
+li {
+    display: inline; /*делает из блочных элементов строчные*/
+    margin-right: 100px;
+}
+li:last-child {
+    margin-right: 0px; /*псевдокласс задаёт стиль последнему элементу li - КОНТАКТЫ, а именно мы убрали отсутуп после контакты. Всегда последний li в нашей верстке будет с обновленным margin*/
+}
+a {
+   color: black; /* меняем список на меню навигации, меняем ссылку на меню навигации, меняцвет с синего на черный*/
+   text-decoration: none; /*убираем подчеркивание ссылки*/
+   font-size: 18px; 
+   font-weight: 700;
+}
+  
+nav {
+     margin-bottom: 20px;
+}
+
+.section-about {
+    height: 640px;
+    background: url(../img/01-picture-background.jpg) center/cover no-repeat;
+    position: relative;
+    margin-bottom: 20px;
+}
+     
+
+ .section-about__block {
+    width: 420px;
+    height: 190px;
+    background: linear-gradient(180deg, rgba(244, 213, 178, 0.8) 0%, rgba(234, 156, 65, 0.8) 100%);
+    position: absolute;
+    top: 54%;   /* было 349px это 349/640=0,054&100=54% */
+    left: 50%;  /* 730px  */
+    text-align: center;
+    padding-top: 15px; /*рассчитатли так 190-160=30/2=15 по 15 на верх и низ, но нам надо выровнить верх рамки, поэтому ставим у родителя 15px
+    */   
+ }
+
+ .section-about__border {
+    width: 390px;
+    height: 160px;
+    border: 1px solid #000000;
+    margin: 0 auto; /*ставим такой margin, если есть свойство width, иначе не сработает*/
+    padding: 17px 0 0 28px;
+    text-align: left;
+    
+ }
+ .section-about__tiile {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 9px;
+    font-family: 'Philosopher';
+ }
+
+ .section-about__text {
+    font-size: 12px;
+    margin: 0;
+ }
+
+ .section-description {
+    margin-bottom: 20px;
+ }
+ .section-description__icon-box {
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ .section-description__icon-box img {
+    margin-right: 76px;
+ }
+ .section-description__icon-box img:last-child {
+    margin-right: 0px;
+ }
+ .section-description__title {
+   font-size: 96px;
+   text-align: center;
+   margin: 0px;
+   font-family: 'Philosopher';
+ }
+ .red {
+   color: #f15b40;
+ }
+ .section-description__text {
+   margin: 0 auto;
+   text-align: center;
+   font-size: 18px;
+   width: 1000px;
+ }
+  .section-map {
+    margin-bottom: 20px;
+  }
+  .section-map_title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Philosopher';
+ }
+
+   iframe {
+    display: block;
+    margin: 0 auto;
+}
+  /*  .line {
+     width: 1024px;
+     margin: 0 auto;
+     border-top: 1px solid #999999;
+} */
+   hr {
+     border: none; 
+     border-top: 1px solid #999999;
+     width: 1024px; 
+     margin: 0 auto;
+     margin-bottom: 20px;
+}
+footer {
+   height: 80px;
+}
+h1 {
+   font-family: 'Roboto!';
+}
